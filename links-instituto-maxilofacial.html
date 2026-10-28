@@ -1,0 +1,210 @@
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600&family=Manrope:wght@300;400;500;600;700&display=swap">
+
+<style>
+/* ===== Instituto Maxilofacial — Página de links (CSS escopado em #iml) ===== */
+#iml, #iml * { box-sizing: border-box !important; }
+#iml {
+  --iml-bg: #0f0f0f;
+  --iml-bg-deep: #0a0a0a;
+  --iml-ink: #f5f2ec;
+  --iml-soft: rgba(255,255,255,.55);
+  --iml-line: rgba(255,255,255,.10);
+  --iml-gold: #b8964f;
+  --iml-gold-grad: linear-gradient(90deg,#7b5f2d 0%,#927440 15%,#a88a54 30%,#c0a069 45%,#cbac72 53%,#bc9c65 62%,#a68651 75%,#8c6e3a 90%,#7b5f2d 100%);
+  position: relative !important;
+  width: 100vw !important;
+  max-width: 100vw !important;
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
+  background: var(--iml-bg) !important;
+  color: var(--iml-ink) !important;
+  font-family: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif !important;
+  font-size: 16px !important;
+  line-height: 1.5 !important;
+  overflow: hidden !important;
+  -webkit-font-smoothing: antialiased;
+}
+#iml a { text-decoration: none !important; color: inherit !important; }
+#iml img { max-width: 100% !important; border: 0 !important; }
+#iml p, #iml h1, #iml h2, #iml ul, #iml li { margin: 0 !important; padding: 0 !important; }
+#iml ul { list-style: none !important; }
+
+/* Fundo com brilho dourado sutil */
+#iml .iml-hero {
+  position: relative !important;
+  padding: 72px 24px 64px !important;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 0%, rgba(184,150,79,.18) 0%, rgba(184,150,79,0) 70%),
+    var(--iml-bg) !important;
+}
+#iml .iml-wrap {
+  width: 100% !important;
+  max-width: 760px !important;
+  margin: 0 auto !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+}
+
+/* Logo + título */
+#iml .iml-logo { display: block !important; height: 84px !important; width: auto !important; max-width: 100% !important; object-fit: contain !important; }
+#iml .iml-eyebrow {
+  display: flex !important; align-items: center !important; gap: 14px !important;
+  margin-top: 28px !important;
+  font-size: 11px !important; font-weight: 600 !important;
+  letter-spacing: .32em !important; text-transform: uppercase !important;
+  color: var(--iml-gold) !important;
+}
+#iml .iml-eyebrow::before, #iml .iml-eyebrow::after {
+  content: "" !important; display: block !important; width: 28px !important; height: 1px !important; background: var(--iml-gold-grad) !important;
+}
+#iml .iml-title {
+  margin-top: 28px !important;
+  font-family: 'Playfair Display', Georgia, serif !important;
+  font-size: 30px !important; font-weight: 400 !important; line-height: 1.2 !important;
+  text-align: center !important; color: var(--iml-ink) !important;
+}
+#iml .iml-title em { font-style: normal !important; color: var(--iml-gold) !important; }
+
+/* Botões de imagem */
+#iml .iml-links { width: 100% !important; margin-top: 40px !important; display: flex !important; flex-direction: column !important; gap: 16px !important; }
+#iml .iml-btn {
+  display: block !important; width: 100% !important;
+  border-radius: 6px !important; overflow: hidden !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  transition: transform .5s cubic-bezier(.2,.7,.2,1), border-color .5s ease, box-shadow .5s ease !important;
+  opacity: 0; transform: translateY(18px);
+  animation: iml-rise .9s cubic-bezier(.2,.7,.2,1) forwards;
+}
+#iml .iml-btn:nth-child(1) { animation-delay: .15s; }
+#iml .iml-btn:nth-child(2) { animation-delay: .30s; }
+#iml .iml-btn:nth-child(3) { animation-delay: .45s; }
+#iml .iml-btn img { display: block !important; width: 100% !important; height: auto !important; }
+#iml .iml-btn:hover, #iml .iml-btn:focus-visible {
+  transform: translateY(-3px) !important;
+  border: 0 !important;
+  box-shadow: none !important;
+}
+@keyframes iml-rise { to { opacity: 1; transform: translateY(0); } }
+
+/* Rodapé */
+#iml .iml-footer {
+  background: var(--iml-bg-deep) !important;
+  border-top: 1px solid var(--iml-line) !important;
+  padding: 56px 24px 28px !important;
+}
+#iml .iml-footer-inner { max-width: 1100px !important; margin: 0 auto !important; }
+#iml .iml-footer-grid { display: grid !important; grid-template-columns: 1fr !important; gap: 40px !important; }
+#iml .iml-footer-logo { display: block !important; height: 56px !important; width: auto !important; object-fit: contain !important; }
+#iml .iml-footer-text { margin-top: 24px !important; max-width: 320px !important; font-size: 14px !important; line-height: 1.7 !important; color: var(--iml-soft) !important; }
+#iml .iml-partners { margin-top: 28px !important; display: flex !important; flex-wrap: wrap !important; align-items: center !important; gap: 24px !important; }
+#iml .iml-partners img { display: block !important; width: auto !important; object-fit: contain !important; }
+#iml .iml-partners .iml-funorte { height: 64px !important; }
+#iml .iml-partners .iml-mec { height: 80px !important; }
+
+#iml .iml-contact li { margin-bottom: 18px !important; }
+#iml .iml-contact li:last-child { margin-bottom: 0 !important; }
+#iml .iml-contact a, #iml .iml-contact .iml-row { display: flex !important; align-items: flex-start !important; gap: 14px !important; }
+#iml .iml-ico { flex: 0 0 18px !important; width: 18px !important; height: 18px !important; margin-top: 3px !important; color: var(--iml-gold) !important; }
+#iml .iml-label { display: block !important; font-size: 10px !important; font-weight: 600 !important; letter-spacing: .24em !important; text-transform: uppercase !important; color: rgba(255,255,255,.4) !important; }
+#iml .iml-value { display: block !important; margin-top: 2px !important; font-size: 15px !important; color: var(--iml-ink) !important; transition: color .4s ease !important; word-break: break-word !important; }
+#iml .iml-contact a:hover .iml-value { color: var(--iml-gold) !important; }
+
+#iml .iml-bottom {
+  margin-top: 48px !important; padding-top: 24px !important;
+  border-top: 1px solid var(--iml-line) !important;
+  display: flex !important; flex-direction: column !important; gap: 8px !important;
+  font-size: 12px !important; color: rgba(255,255,255,.4) !important;
+}
+
+@media (min-width: 768px) {
+  #iml .iml-hero { padding: 96px 24px 88px !important; }
+  #iml .iml-logo { height: 100px !important; }
+  #iml .iml-title { font-size: 36px !important; }
+  #iml .iml-footer-grid { grid-template-columns: 1.1fr 1fr !important; gap: 64px !important; }
+  #iml .iml-bottom { flex-direction: row !important; justify-content: space-between !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  #iml .iml-btn { animation: none !important; opacity: 1 !important; transform: none !important; transition: none !important; }
+}
+</style>
+
+<div id="iml">
+
+  <section class="iml-hero">
+    <div class="iml-wrap">
+      <img class="iml-logo"
+           src="img/Marca-Dagua-Logotipo-Principal-Instituto-Maxilofacial-3.png"
+           alt="Instituto Maxilofacial — Cirurgia Oral Avançada">
+
+      <h1 class="iml-title">Excelência em formação<br><em>avançada em Cirurgia Oral</em></h1>
+
+      <nav class="iml-links" aria-label="Links do Instituto Maxilofacial">
+        <a class="iml-btn" href="#" target="_blank" rel="noopener" aria-label="Localização">
+          <img src="img/Site-Links-MAXILO-LOCALIZACAO.png" alt="Localização" loading="eager">
+        </a>
+        <a class="iml-btn" href="https://maxilofacialinstituto.com/" target="_blank" rel="noopener" aria-label="Site do Instituto">
+          <img src="img/Site-Links-MAXILO-SITE.png" alt="Site do Instituto" loading="eager">
+        </a>
+        <a class="iml-btn" href="https://wa.me/5527996400410" target="_blank" rel="noopener" aria-label="WhatsApp">
+          <img src="img/Site-Links-MAXILO-WHATSAPP.png" alt="WhatsApp" loading="eager">
+        </a>
+      </nav>
+    </div>
+  </section>
+
+  <footer class="iml-footer">
+    <div class="iml-footer-inner">
+      <div class="iml-footer-grid">
+
+        <div>
+          <img class="iml-footer-logo"
+               src="img/Marca-Dagua-Logotipo-Principal-Instituto-Maxilofacial-3.png"
+               alt="Instituto Maxilofacial — Cirurgia Oral Avançada" loading="lazy">
+          <p class="iml-footer-text">Formação avançada em cirurgia oral para dentistas que buscam excelência técnica e científica.</p>
+          <div class="iml-partners">
+            <img class="iml-funorte" src="img/curso-funorte.png" alt="Parceria institucional Funorte" loading="lazy">
+            <img class="iml-mec" src="img/Nota-5-mec-curso.png" alt="Selo de reconhecimento do curso pelo MEC" loading="lazy">
+          </div>
+        </div>
+
+        <ul class="iml-contact">
+          <li>
+            <a href="https://wa.me/5527996400410" target="_blank" rel="noopener">
+              <svg class="iml-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>
+              <span><span class="iml-label">WhatsApp</span><span class="iml-value">(27) 99640-0410</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank" rel="noopener">
+              <svg class="iml-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+              <span><span class="iml-label">Instagram</span><span class="iml-value">@institutomaxilofacial</span></span>
+            </a>
+          </li>
+          <li>
+            <a href="mailto:contato@institutomaxilofacial.com">
+              <svg class="iml-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              <span><span class="iml-label">E-mail</span><span class="iml-value">contato@institutomaxilofacial.com</span></span>
+            </a>
+          </li>
+          <li>
+            <div class="iml-row">
+              <svg class="iml-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+              <span><span class="iml-label">Endereço</span><span class="iml-value">Endereço a definir</span></span>
+            </div>
+          </li>
+        </ul>
+
+      </div>
+
+      <div class="iml-bottom">
+        <span>© 2026 Instituto Maxilofacial. Todos os direitos reservados.</span>
+        <span>Cirurgia Oral Avançada</span>
+      </div>
+    </div>
+  </footer>
+
+</div>
